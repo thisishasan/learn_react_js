@@ -4,7 +4,16 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+//const greetings = React.createElement('h1', {}, "Hello World!");
+
+const getCurrentDate = () => {
+    const date = new Date();
+    return date.toDateString();
+}
+
+const greetings = <h1>Hello World! Current Date: { getCurrentDate() }</h1>
+
+ReactDOM.render(greetings, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
